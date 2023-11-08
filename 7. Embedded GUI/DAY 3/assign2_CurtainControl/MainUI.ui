@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>592</width>
+    <height>577</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>55</x>
+      <y>50</y>
+      <width>291</width>
+      <height>453</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="upBtn">
+    <property name="geometry">
+     <rect>
+      <x>368</x>
+      <y>49</y>
+      <width>141</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 255);
+color: rgb(0, 0, 0);
+font: 700 18pt &quot;맑은 고딕&quot;;</string>
+    </property>
+    <property name="text">
+     <string>UP</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="downBtn">
+    <property name="geometry">
+     <rect>
+      <x>368</x>
+      <y>190</y>
+      <width>141</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 170, 255);
+color: rgb(0, 0, 0);
+font: 700 18pt &quot;맑은 고딕&quot;;</string>
+    </property>
+    <property name="text">
+     <string>DOWN</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Description">
+    <property name="geometry">
+     <rect>
+      <x>372</x>
+      <y>340</y>
+      <width>134</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 700 14pt &quot;맑은 고딕&quot;;
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>모터 속도 제어</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="Slider">
+    <property name="geometry">
+     <rect>
+      <x>369</x>
+      <y>391</y>
+      <width>136</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="SpeedLabel">
+    <property name="geometry">
+     <rect>
+      <x>372</x>
+      <y>455</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 700 12pt &quot;맑은 고딕&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>현재 속도 : </string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>592</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>upBtn</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>upclick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>446</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>downBtn</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>downclick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>453</x>
+     <y>248</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>556</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>upBtn</sender>
+   <signal>released()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>upstop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>486</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>546</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>downBtn</sender>
+   <signal>released()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>downstop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>501</x>
+     <y>307</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>563</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>upclick()</slot>
+  <slot>downclick()</slot>
+  <slot>upstop()</slot>
+  <slot>downstop()</slot>
+ </slots>
+</ui>
